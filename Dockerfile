@@ -21,14 +21,14 @@ RUN git clone https://github.com/baramundisoftware/shim.git	--branch baramundi-s
 WORKDIR /shim_x64
 RUN LIB_PATH=/usr/lib64 \
 	&& make -C /shim_source clean \
-	&& make -C /shim_source shim.efi CC=gcc-4.8 ARCH=x86_64 EFI_PATH=/usr/lib DEFAULT_LOADER=bblefi-x64/grub2_x64.efi VENDOR_CERT_FILE=/shim-review/bsAG_EV_productive_2020.cer \
+	&& make -C /shim_source shim.efi CC=gcc-4.8 ARCH=x86_64 EFI_PATH=/usr/lib DEFAULT_LOADER=bblefi-x64/grub2_x64.efi VENDOR_CERT_FILE=/shim-review/bsAG_EV_productive_2020.cer 2>&1 | tee grub2_x64_build.log \
 	&& cp /shim_source/shim.efi ./shim_x64.efi
 	
 #build shim for x86 systems
 WORKDIR /shim_x86
 RUN LIB_PATH=/usr/lib32 \
 	&& make -C /shim_source clean \
-	&& make -C /shim_source shim.efi CC=gcc-4.8 ARCH=ia32 EFI_PATH=/usr/lib32 DEFAULT_LOADER=bblefi-x86/grub2_x86.efi VENDOR_CERT_FILE=/shim-review/bsAG_EV_productive_2020.cer \
+	&& make -C /shim_source shim.efi CC=gcc-4.8 ARCH=ia32 EFI_PATH=/usr/lib32 DEFAULT_LOADER=bblefi-x86/grub2_x86.efi VENDOR_CERT_FILE=/shim-review/bsAG_EV_productive_2020.cer 2>&1 | tee grub2_x86_build.log \
 	&& cp /shim_source/shim.efi ./shim_x86.efi
 
 WORKDIR /
