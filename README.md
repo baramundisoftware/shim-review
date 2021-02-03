@@ -37,18 +37,18 @@ With a signed SHIM bootloader we are able to support clients with enabled secure
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name:
-- Position:
-- Email address:
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community:
+- Name: Simon Förg
+- Position: Software Developer
+- Email address: simon.foerg@baramundi.com
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: CB1B 7D3A 6F0D 8CB8 5798 DF4F EB9C 0A29 123E D0BE
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name:
-- Position:
-- Email address:
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community:
+- Name: Felix Sauer
+- Position: Software Developer
+- Email address: felix.sauer@baramundi.com
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: B7C0 FCA5 E582 FDF5 BEC2 796C 8010 5207 B17C 1CE6
 
 -------------------------------------------------------------------------------
 What upstream shim tag is this starting from:
